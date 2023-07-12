@@ -1,6 +1,4 @@
 from trivia import main
-import trivia
-import random
 
 
 class TestTrivia:
