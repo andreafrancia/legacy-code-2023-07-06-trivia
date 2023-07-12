@@ -6,9 +6,9 @@ import random
 class TestTrivia:
     def test_trivia(self):
         lines = []
-        trivia.print = lambda x: lines.append(x)
+        my_print = lambda x: lines.append(x)
 
-        main(0)
+        main(0, my_print)
 
         assert ['Chet was added',
                 'They are player number 1',
