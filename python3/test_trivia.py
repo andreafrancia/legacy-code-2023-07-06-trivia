@@ -7,9 +7,8 @@ class TestTrivia:
     def test_trivia(self):
         lines = []
         trivia.print = lambda x: lines.append(x)
-        random.seed(0)
 
-        main()
+        main(0)
 
         assert ['Chet was added',
                 'They are player number 1',

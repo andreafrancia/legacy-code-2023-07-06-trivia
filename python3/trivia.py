@@ -1,4 +1,5 @@
 #!/usr/bin/env python3
+import random
 import sys
 
 
@@ -149,7 +150,10 @@ class Game:
 
 from random import randrange
 
-def main():
+def main(random_seed):
+    if random_seed is not None:
+        random.seed(random_seed)
+
     not_a_winner = False
 
     game = Game()
@@ -171,7 +175,7 @@ def main():
 
 
 if __name__ == '__main__':
-    main()
+    main(None)
 # in java
 # System.out.println -> search and replace -> MyPrint.println()
 # dirottare in logging
