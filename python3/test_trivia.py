@@ -19,11 +19,16 @@ class TestTrivia:
         printer = Printer()
         game = Game(printer.print)
         game.add('Chet')
+        game.add('Pat')
         printer.do_track()
 
         game.wrong_answer()
+        game.wrong_answer()
 
         assert printer.messages == ['Question was incorrectly answered',
-                                    'Chet was sent to the penalty box']
-        assert game.in_penalty_box == [True, False, 0, 0, 0, 0]
+                                    'Chet was sent to the penalty box',
+                                    'Question was incorrectly answered',
+                                    'Pat was sent to the penalty box'
+                                    ]
+        assert game.in_penalty_box == [True, True, 0, 0, 0, 0]
         assert game.current_player == 0
